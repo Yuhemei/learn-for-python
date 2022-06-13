@@ -4,6 +4,7 @@ def print_a(msg):
 
 
 class Person(object):
+
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -48,11 +49,7 @@ len(d_list)
 max(d_list)
 min(d_list)
 sum(d_list)
-e_list = zip(c_list, d_list)
-
-for item in enumerate(d_list):
-
-    print(item)
+e_list = zip(c_list, d_list)  #元素合并
 
 # 遍历列表的三种方式
 
@@ -67,10 +64,8 @@ for i in range(len(d_list)):
 
 # 列表推导式
 f_list = [i for i in range(100)]
-print(f_list)
-
+# [目标元素  遍历  约束条件]
 g_list = [i for i in f_list if i > 50]
-print(g_list)
 
 # 列表的切片操作 li[start:end:step],切片返回的是列表元素的浅复制
 h_list = g_list
@@ -79,9 +74,7 @@ print('g_list和h_list是同一个元素吗？', h_list is g_list)
 # 元组tuple
 
 a_tuple = (a_list, b_list, c_list)
-print(a_tuple)
 a_list[1] = 44
-print(a_tuple)
 # 元组中的元素若为列表可以改，元组对自己本身无法改变
 
 # sort 按某一属性进行升降序排序
@@ -89,9 +82,7 @@ a = (0, 8, 2, 6, 3)
 b = [('a', 12), ('b', 12), ('c', 1), ('d', 13), ('e', 2)]
 person_list = [Person('q', 2), Person('w', 1), Person('e', 3), Person('r', 6)]
 a.sort(cmp=None, key=None, reverse=True)  # reverse 参数为 True 时逆向排序
-print(a)
-b.sort(key=lambda x: x[1])
-print(b)
+b.sort(key=lambda x: x[1], reverse=True)
 person_list.sort(key=lambda x: x.age)
-for i in person_list:
-    print i.age
+for item in person_list:
+    print(item.age)
