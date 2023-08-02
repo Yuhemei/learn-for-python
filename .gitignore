@@ -1,1 +1,11 @@
 venv
+*.idea
+.idea
+*.iml
+.idea
+*.xml
+.ipynb_checkpoints
+**/.ipynb_checkpoints
+venvpython
+*.txt
+*.pyc
