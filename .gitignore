@@ -9,3 +9,5 @@ venv
 venvpython
 *.txt
 *.pyc
+
+.DS_Store
